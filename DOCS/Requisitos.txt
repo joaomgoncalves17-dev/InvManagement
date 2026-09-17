@@ -1,0 +1,64 @@
+REQUISITOS - APLICAÇÃO DE GESTÃO DE INVENTÁRIO DE EQUIPAMENTOS
+================================================================
+
+
+REQUISITOS FUNCIONAIS (USER STORIES)
+--------------------------------------
+
+Perfil: Administrador
+
+1. Como Administrador, quero criar contas de utilizador, para dar acesso ao
+   sistema aos colegas.
+2. Como Administrador, quero atribuir um perfil (Admin, Técnico ou
+   Utilizador) a cada conta, para controlar o que cada um pode fazer.
+3. Como Administrador, quero remover ou desativar contas de utilizadores
+   que saem da empresa, para manter o sistema seguro e atualizado.
+4. Como Administrador, quero criar, editar e remover departamentos, para
+   manter a estrutura da empresa atualizada.
+5. Como Administrador, quero remover equipamentos e fornecedores do
+   sistema, para manter os dados corretos.
+6. Como Administrador, quero consultar relatórios completos de
+   equipamentos e custos de manutenção, para ter uma visão geral do
+   parque informático da empresa.
+
+Perfil: Técnico
+
+7. Como Técnico, quero registar um novo equipamento no sistema, para
+   manter o inventário atualizado.
+8. Como Técnico, quero editar os dados de um equipamento existente, para
+   corrigir ou atualizar informação (localização, estado, etc.).
+9. Como Técnico, quero registar uma nova intervenção de manutenção num
+   equipamento, para manter o histórico atualizado.
+10. Como Técnico, quero consultar o histórico de manutenções de um
+    equipamento, para perceber problemas recorrentes antes de intervir.
+11. Como Técnico, quero criar e gerir fornecedores, para poder associá-los
+    aos equipamentos comprados.
+12. Como Técnico, quero ser notificado sobre garantias a expirar, para
+    poder agir a tempo (renovar ou substituir equipamento).
+
+Perfil: Utilizador normal
+
+13. Como Utilizador, quero consultar os equipamentos que me estão
+    atribuídos, para saber o que tenho ao meu cuidado.
+14. Como Utilizador, quero ver o meu perfil e alterar a minha password,
+    para gerir a minha própria conta.
+15. Como Utilizador, quero consultar o departamento a que pertenço, para
+    me situar na organização.
+
+
+REQUISITOS NÃO-FUNCIONAIS
+--------------------------------------
+
+1. Segurança: as passwords devem ser guardadas com hash seguro (nunca em
+   texto simples).
+2. Segurança: o acesso à API deve ser protegido por autenticação JWT.
+3. Segurança: todas as ações devem respeitar as permissões associadas ao
+   perfil do utilizador autenticado (Admin, Técnico, Utilizador).
+4. Desempenho: os pedidos à API devem responder em menos de 1 segundo em
+   condições normais de utilização.
+5. Usabilidade: a interface deve ser responsiva, funcionando também em
+   ecrãs mais pequenos (tablet).
+6. Disponibilidade: a aplicação deve estar acessível através do servidor
+   Windows Server (IIS) configurado no Projeto 1 (infraestrutura de rede).
+7. Manutenibilidade: o código deve seguir uma arquitetura em camadas
+   (Controllers, Services, Data), para facilitar alterações futuras.
