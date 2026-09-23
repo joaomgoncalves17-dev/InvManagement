@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Inventario.consola/">
+    <Project Path="Inventario.consola/Inventario.Consola.csproj" />
+  </Folder>
+  <Folder Name="/Inventario.Core/">
+    <Project Path="Inventario.Core/Inventario.Core.csproj" />
+  </Folder>
+  <Project Path="Inventario.Api/Inventario.Api.csproj" />
+</Solution>
